@@ -177,4 +177,12 @@
         </div>
     </footer>
 </body>
+<script>
+    // Forzar scroll al inicio al cargar la página
+    window.onload = function() {
+        if (window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    };
+</script>
 </html>
