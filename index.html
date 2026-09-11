@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Como - Manual de Usuario (TFG DAM 2026)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="logo-badge">TFG · DAM 2026</div>
+            <h1>Q-Como</h1>
+            <p class="tagline">Escanea · Descubre · Elige mejor</p>
+            <p class="hero-desc">Aplicación móvil para Android orientada al consumo consciente y sostenible. Traduce el etiquetado de los alimentos en información clara de salud y medio ambiente.</p>
+            <div class="hero-buttons">
+                <a href="#introduccion" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Ver Manual</a>
+                <a href="#quienes-somos" class="btn btn-outline"><i class="fa-solid fa-users"></i> Quiénes Somos</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-layout">
+        <aside class="sidebar">
+            <nav class="toc">
+                <h3>Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#introduccion">1. Introducción</a></li>
+                    <li><a href="#requisitos">2. Requisitos</a></li>
+                    <li><a href="#registro">3. Registro e inicio de sesión</a></li>
+                    <li><a href="#onboarding">4. Pantalla de onboarding</a></li>
+                    <li><a href="#escaneo">5. Escaneo de un producto</a></li>
+                    <li><a href="#detalle">6. Detalle del producto</a></li>
+                    <li><a href="#favoritos">7. Añadir a favoritos</a></li>
+                    <li><a href="#puntos">8. Sistema de puntos y gamificación</a></li>
+                    <li><a href="#jardin-zen">9. El Jardín Zen</a></li>
+                    <li><a href="#ranking">10. Ranking y comunidad</a></li>
+                    <li><a href="#contribucion">11. Contribución a Open Food Facts</a></li>
+                    <li><a href="#quienes-somos">12. Quiénes somos</a></li>
+                    <li><a href="#menu-opciones">13. Menú de opciones (Home)</a></li>
+                    <li><a href="#mi-cuenta">14. Mi cuenta</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="content">
+            <section id="introduccion" class="card">
+                <h2>1. Introducción</h2>
+                <p><strong>Q-Como</strong> es una aplicación móvil para Android que permite a los usuarios escanear el código de barras de productos alimenticios y consultar al instante información nutricional y medioambiental relevante: el <strong>Nutri-Score</strong> (calidad nutricional) y el <strong>Green-Score</strong> (impacto ambiental).</p>
+                <p>Además de esta función principal, la app incorpora un sistema de favoritos, gamificación mediante puntos y recompensas visuales, y la posibilidad de contribuir con nuevos datos a la comunidad de Open Food Facts, fomentando el consumo informado y sostenible.</p>
+            </section>
+
+            <section id="requisitos" class="card">
+                <h2>2. Requisitos</h2>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-mobile-screen"></i> <strong>Dispositivo:</strong> Android 8.0 (Oreo) o superior.</li>
+                    <li><i class="fa-solid fa-wifi"></i> <strong>Conexión a internet:</strong> Necesaria para consultar productos y sincronizar datos.</li>
+                    <li><i class="fa-solid fa-user-check"></i> <strong>Cuenta de usuario:</strong> Registro dentro de la propia app.</li>
+                    <li><i class="fa-solid fa-camera"></i> <strong>Cámara del dispositivo:</strong> Para el escaneo de códigos de barras.</li>
+                </ul>
+            </section>
+
+            <section id="registro" class="card">
+                <h2>3. Registro e inicio de sesión</h2>
+                <p>Al abrir la aplicación sin una sesión activa, se muestra la pantalla de inicio de sesión con el logotipo corporativo y el eslogan <em>"Escanea · Descubre · Elige mejor"</em>.</p>
+                <div class="grid-2">
+                    <div>
+                        <h3>Pantalla de Login</h3>
+                        <ul>
+                            <li>Campo de correo electrónico.</li>
+                            <li>Campo de contraseña con opción de mostrar/ocultar.</li>
+                            <li>Enlace de recuperación "¿La olvidaste?".</li>
+                            <li>Botones "Entrar" y "Crear una cuenta".</li>
+                            <li>Enlace directo a "Consumo consciente" (Quiénes somos).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Pantalla de Registro ("Crea tu cuenta")</h3>
+                        <ul>
+                            <li>Nombre de usuario.</li>
+                            <li>Correo electrónico y contraseña con confirmación.</li>
+                            <li>Botón "Registrarme".</li>
+                            <li>Enlace "¿Ya tienes cuenta? Inicia sesión".</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="onboarding" class="card">
+                <h2>4. Pantalla de onboarding</h2>
+                <p>Tras el primer registro (o inicio de sesión inaugural), la app muestra tres pantallas deslizables introductorias:</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span class="step-num">1</span>
+                        <h4>Eco-Score</h4>
+                        <p>"Descubre el eco-score de tus productos y cuida el planeta."</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">2</span>
+                        <h4>Comunidad</h4>
+                        <p>"Forma parte de una comunidad que hace crecer Open Food Facts."</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">3</span>
+                        <h4>Consumo Consciente</h4>
+                        <p>"Pequeñas elecciones. Un consumo más consciente cada día." Botón ¡Empezar!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="escaneo" class="card">
+                <h2>5. Escaneo de un producto</h2>
+                <p>Desde la pantalla principal, el usuario accede al visor de cámara en tiempo real con un marco de encuadre y una línea roja horizontal indicativa de la lectura del código de barras. Cuenta con un acceso alternativo mediante código QR en la parte inferior.</p>
+            </section>
+
+            <section id="detalle" class="card">
+                <h2>6. Pantalla de detalle del producto</h2>
+                <p>Muestra la ficha técnica detallada tras la lectura del código:</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-tag"></i> <strong>Cabecera:</strong> Nombre del producto y código de barras.</li>
+                    <li><i class="fa-solid fa-chart-pie"></i> <strong>Puntuaciones:</strong> Green-Score (impacto ambiental) y Nutri-Score (escala de colores de la A a la E).</li>
+                    <li><i class="fa-solid fa-cogs"></i> <strong>Procesamiento:</strong> Nivel de procesado del alimento.</li>
+                    <li><i class="fa-solid fa-apple-whole"></i> <strong>Nutrientes:</strong> Valores por 100g (azúcares, grasas saturadas con barras visuales).</li>
+                    <li><i class="fa-solid fa-triangle-exclamation"></i> <strong>Ingredientes y alérgenos:</strong> Listado detallado.</li>
+                </ul>
+            </section>
+
+            <section id="favoritos" class="card">
+                <h2>7. Añadir a favoritos</h2>
+                <p>Pulsando el icono de tres puntos (⋮) en la ficha de detalle, se despliega un menú contextual con dos acciones principales:</p>
+                <ul>
+                    <li><strong>Aportar información:</strong> Contribuir con datos a Open Food Facts.</li>
+                    <li><strong>Incluir en favoritos:</strong> Guarda el producto en la lista personal del usuario.</li>
+                </ul>
+            </section>
+
+            <section id="puntos" class="card">
+                <h2>8. Sistema de puntos y gamificación</h2>
+                <p>Los puntos obtenidos por el uso de la app definen el nivel y la insignia del usuario:</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Puntos requeridos</th>
+                                <th>Insignia</th>
+                                <th>Nivel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&lt; 1.000 pts</td>
+                                <td><span class="badge semila">Semila</span></td>
+                                <td>Nivel 1</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 1.000 pts</td>
+                                <td><span class="badge brote">Brote</span></td>
+                                <td>Nivel 2</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 1.500 pts</td>
+                                <td><span class="badge hoja">Hoja verde</span></td>
+                                <td>Nivel 3</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 2.000 pts</td>
+                                <td><span class="badge arbol">Árbol</span></td>
+                                <td>Nivel 4</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 2.500 pts</td>
+                                <td><span class="badge bosque">Bosque</span></td>
+                                <td>Nivel 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="jardin-zen" class="card">
+                <h2>9. El Jardín Zen</h2>
+                <p>Es la recompensa visual del progreso del usuario: un jardín personal (庭) que se enriquece con árboles, piedras y elementos decorativos a medida que se sube de nivel. Accesible exclusivamente desde el menú superior de la Home.</p>
+            </section>
+
+            <section id="ranking" class="card">
+                <h2>10. Ranking / colaboración con la comunidad</h2>
+                <p>Clasificación de usuarios según los puntos acumulados, mostrando avatar, nombre, puntuación y nivel actual. Permite acceder al estado de la huella/insignia personal.</p>
+            </section>
+
+            <section id="contribucion" class="card">
+                <h2>11. Contribución a Open Food Facts</h2>
+                <p>Formulario para introducir manualmente datos nutricionales que se envían directamente a la base de datos comunitaria:</p>
+                <div class="grid-2">
+                    <ul>
+                        <li>Grado de procesamiento (NOVA 1-4)</li>
+                        <li>Energía (kcal/100g)</li>
+                        <li>Azúcares / 100g</li>
+                        <li>Grasas saturadas / 100g</li>
+                    </ul>
+                    <ul>
+                        <li>Sal / 100g</li>
+                        <li>Fibra / 100g</li>
+                        <li>Proteínas / 100g</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="quienes-somos" class="card">
+                <h2>12. Quiénes somos</h2>
+                <div class="grid-2">
+                    <div class="info-box">
+                        <h3>Q-Como</h3>
+                        <p>Trabajo de Fin de Grado (TFG) de Desarrollo de Aplicaciones Multiplataforma (DAM). Su objetivo es traducir las etiquetas en información comprensible de un vistazo.</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Open Food Facts</h3>
+                        <p>Asociación sin ánimo de lucro fundada en Francia en 2012. Funciona como una Wikipedia del etiquetado con más de 4M de productos, 25K+ colaboradores y 150+ países.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="menu-opciones" class="card">
+                <h2>13. Menú de opciones (Home)</h2>
+                <p>Desplegable desde el icono superior (⋮) que agrupa accesos rápidos:</p>
+                <ul>
+                    <li><strong>Mi cuenta:</strong> Gestión de datos de usuario.</li>
+                    <li><strong>Quiénes somos:</strong> Información del proyecto y Open Food Facts.</li>
+                    <li><strong>Jardín Zen:</strong> Acceso al jardín personal interactivo.</li>
+                    <li><strong>Recompensas niveles:</strong> Tabla completa de insignias y puntos.</li>
+                    <li><strong>Info Logros:</strong> Detalles sobre los logros de la aplicación.</li>
+                </ul>
+            </section>
+
+            <section id="mi-cuenta" class="card">
+                <h2>14. Mi cuenta</h2>
+                <p>Pantalla de gestión que muestra el correo electrónico asociado a la sesión activa y permite pulsar el botón <strong>"Cerrar sesión"</strong> para salir de la aplicación de forma segura.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Q-Como · Come mejor, vive mejor &copy; 2026. TFG DAM.</p>
+        </div>
+    </footer>
+</body>
+</html>
