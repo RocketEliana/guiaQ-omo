@@ -261,6 +261,39 @@ body {
     border: 1px solid var(--border-color);
 }
 
+/* Estilos para previsualización de pantallas / diseño de interfaces */
+.screen-preview {
+    background: #f9fbf8;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.screen-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e8f5e9;
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.screen-preview ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.screen-preview li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
 /* Tablas */
 .table-wrapper {
     overflow-x: auto;

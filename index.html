@@ -65,21 +65,22 @@
                 <h2>3. Registro e inicio de sesión</h2>
                 <p>Al abrir la aplicación sin una sesión activa, se muestra la pantalla de inicio de sesión con el logotipo corporativo y el eslogan <em>"Escanea · Descubre · Elige mejor"</em>.</p>
                 <div class="grid-2">
-                    <div>
-                        <h3>Pantalla de Login</h3>
+                    <div class="screen-preview">
+                        <div class="screen-tag"><i class="fa-solid fa-mobile"></i> Pantalla de Login</div>
                         <ul>
-                            <li>Campo de correo electrónico.</li>
-                            <li>Campo de contraseña con opción de mostrar/ocultar.</li>
-                            <li>Enlace de recuperación "¿La olvidaste?".</li>
-                            <li>Botones "Entrar" y "Crear una cuenta".</li>
-                            <li>Enlace directo a "Consumo consciente" (Quiénes somos).</li>
+                            <li>Logo de la aplicación y eslogan ("Escanea · Descubre · Elige mejor").</li>
+                            <li>Campo de correo electrónico y contraseña (con opción mostrar/ocultar).</li>
+                            <li>Casilla "Mostrar contraseña" y enlace "¿La olvidaste?".</li>
+                            <li>Botón "Entrar" y botón "Crear una cuenta".</li>
+                            <li>Enlace "Consumo consciente" (sección Quiénes somos).</li>
                         </ul>
                     </div>
-                    <div>
-                        <h3>Pantalla de Registro ("Crea tu cuenta")</h3>
+                    <div class="screen-preview">
+                        <div class="screen-tag"><i class="fa-solid id-card"></i> Pantalla de Registro</div>
                         <ul>
-                            <li>Nombre de usuario.</li>
-                            <li>Correo electrónico y contraseña con confirmación.</li>
+                            <li>Campo "Nombre de usuario".</li>
+                            <li>Campo "Correo electrónico".</li>
+                            <li>Contraseña y "Confirmar contraseña".</li>
                             <li>Botón "Registrarme".</li>
                             <li>Enlace "¿Ya tienes cuenta? Inicia sesión".</li>
                         </ul>
@@ -89,40 +90,48 @@
 
             <section id="onboarding" class="card">
                 <h2>4. Pantalla de onboarding</h2>
-                <p>Tras el primer registro (o inicio de sesión inaugural), la app muestra tres pantallas deslizables introductorias:</p>
+                <p>Tras el primer registro (o inicio de sesión inaugural), la app muestra tres pantallas deslizables introductorias con indicador de progreso:</p>
                 <div class="steps-grid">
                     <div class="step-card">
                         <span class="step-num">1</span>
                         <h4>Eco-Score</h4>
-                        <p>"Descubre el eco-score de tus productos y cuida el planeta."</p>
+                        <p>Icono de planeta con hojas: "Descubre el eco-score de tus productos y cuida el planeta". Botón Siguiente.</p>
                     </div>
                     <div class="step-card">
                         <span class="step-num">2</span>
                         <h4>Comunidad</h4>
-                        <p>"Forma parte de una comunidad que hace crecer Open Food Facts."</p>
+                        <p>Icono de comunidad: "Forma parte de una comunidad que hace crecer Open Food Facts". Botón Siguiente.</p>
                     </div>
                     <div class="step-card">
                         <span class="step-num">3</span>
                         <h4>Consumo Consciente</h4>
-                        <p>"Pequeñas elecciones. Un consumo más consciente cada día." Botón ¡Empezar!</p>
+                        <p>Icono de sartén: "Pequeñas elecciones. Un consumo más consciente cada día". Botón ¡Empezar!.</p>
                     </div>
                 </div>
             </section>
 
             <section id="escaneo" class="card">
                 <h2>5. Escaneo de un producto</h2>
-                <p>Desde la pantalla principal, el usuario accede al visor de cámara en tiempo real con un marco de encuadre y una línea roja horizontal indicativa de la lectura del código de barras. Cuenta con un acceso alternativo mediante código QR en la parte inferior.</p>
+                <p>Desde la pantalla principal, el usuario accede al visor de cámara para la lectura de códigos de barras:</p>
+                <div class="screen-preview single-preview">
+                    <div class="screen-tag"><i class="fa-solid fa-camera"></i> Visor de Escaneo</div>
+                    <ul>
+                        <li>Título "Escanea tu alimento" y texto guía explicativo.</li>
+                        <li>Visor de cámara en tiempo real con marco de encuadre y línea roja horizontal de lectura.</li>
+                        <li>Icono de código QR en la parte inferior como acceso alternativo.</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="detalle" class="card">
                 <h2>6. Pantalla de detalle del producto</h2>
-                <p>Muestra la ficha técnica detallada tras la lectura del código:</p>
+                <p>Muestra la ficha técnica detallada tras la lectura del código (ejemplo: Fabada):</p>
                 <ul class="feature-list">
                     <li><i class="fa-solid fa-tag"></i> <strong>Cabecera:</strong> Nombre del producto y código de barras.</li>
-                    <li><i class="fa-solid fa-chart-pie"></i> <strong>Puntuaciones:</strong> Green-Score (impacto ambiental) y Nutri-Score (escala de colores de la A a la E).</li>
-                    <li><i class="fa-solid fa-cogs"></i> <strong>Procesamiento:</strong> Nivel de procesado del alimento.</li>
-                    <li><i class="fa-solid fa-apple-whole"></i> <strong>Nutrientes:</strong> Valores por 100g (azúcares, grasas saturadas con barras visuales).</li>
-                    <li><i class="fa-solid fa-triangle-exclamation"></i> <strong>Ingredientes y alérgenos:</strong> Listado detallado.</li>
+                    <li><i class="fa-solid fa-chart-pie"></i> <strong>Puntuaciones:</strong> Green-Score (impacto ambiental, icono "?" si no disponible) y Nutri-Score (escala de colores de la A a la E).</li>
+                    <li><i class="fa-solid fa-cogs"></i> <strong>Procesamiento:</strong> Nivel de procesado del alimento (ej. "Procesado").</li>
+                    <li><i class="fa-solid fa-apple-whole"></i> <strong>Nutrientes (por 100g):</strong> Valores destacados como azúcares y grasas saturadas con barras visuales de nivel.</li>
+                    <li><i class="fa-solid fa-triangle-exclamation"></i> <strong>Ingredientes y alérgenos:</strong> Listado detallado. Barra de navegación inferior común.</li>
                 </ul>
             </section>
 
@@ -132,12 +141,13 @@
                 <ul>
                     <li><strong>Aportar información:</strong> Contribuir con datos a Open Food Facts.</li>
                     <li><strong>Incluir en favoritos:</strong> Guarda el producto en la lista personal del usuario.</li>
+                    <li><em>Nota adicional:</em> Se muestran mensajes contextuales de feedback nutricional (ej. "Buena elección nutricional").</li>
                 </ul>
             </section>
 
             <section id="puntos" class="card">
                 <h2>8. Sistema de puntos y gamificación</h2>
-                <p>Los puntos obtenidos por el uso de la app definen el nivel y la insignia del usuario:</p>
+                <p>Los puntos obtenidos por el uso de la app definen el nivel y la insignia visual del usuario:</p>
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -150,7 +160,7 @@
                         <tbody>
                             <tr>
                                 <td>&lt; 1.000 pts</td>
-                                <td><span class="badge semila">Semila</span></td>
+                                <td><span class="badge semila">Semilla</span></td>
                                 <td>Nivel 1</td>
                             </tr>
                             <tr>
@@ -180,12 +190,12 @@
 
             <section id="jardin-zen" class="card">
                 <h2>9. El Jardín Zen</h2>
-                <p>Es la recompensa visual del progreso del usuario: un jardín personal (庭) que se enriquece con árboles, piedras y elementos decorativos a medida que se sube de nivel. Accesible exclusivamente desde el menú superior de la Home.</p>
+                <p>Es la recompensa visual del progreso del usuario: un jardín personal (庭) que se enriquece con árboles de distintos colores, piedras, farolillo y fuente a medida que se sube de nivel. Accesible exclusivamente desde el menú superior de la Home.</p>
             </section>
 
             <section id="ranking" class="card">
                 <h2>10. Ranking / colaboración con la comunidad</h2>
-                <p>Clasificación de usuarios según los puntos acumulados, mostrando avatar, nombre, puntuación y nivel actual. Permite acceder al estado de la huella/insignia personal.</p>
+                <p>Clasificación de usuarios según los puntos acumulados, mostrando posición, avatar/insignia de nivel, nombre y puntuación. Incluye el enlace <em>"Toca para ver tu huella"</em> para verificar la recompensa visual correspondiente.</p>
             </section>
 
             <section id="contribucion" class="card">
@@ -193,7 +203,7 @@
                 <p>Formulario para introducir manualmente datos nutricionales que se envían directamente a la base de datos comunitaria:</p>
                 <div class="grid-2">
                     <ul>
-                        <li>Grado de procesamiento (NOVA 1-4)</li>
+                        <li>Grado de procesamiento (NOVA 1 a 4)</li>
                         <li>Energía (kcal/100g)</li>
                         <li>Azúcares / 100g</li>
                         <li>Grasas saturadas / 100g</li>
@@ -202,6 +212,7 @@
                         <li>Sal / 100g</li>
                         <li>Fibra / 100g</li>
                         <li>Proteínas / 100g</li>
+                        <li>Botón flotante (+) para confirmar o añadir campos.</li>
                     </ul>
                 </div>
             </section>
@@ -211,11 +222,11 @@
                 <div class="grid-2">
                     <div class="info-box">
                         <h3>Q-Como</h3>
-                        <p>Trabajo de Fin de Grado (TFG) de Desarrollo de Aplicaciones Multiplataforma (DAM). Su objetivo es traducir las etiquetas en información comprensible de un vistazo.</p>
+                        <p>Trabajo de Fin de Grado (TFG) de Desarrollo de Aplicaciones Multiplataforma (DAM). Traduce etiquetas a impacto ambiental y de salud sin requerir ser ingeniero de datos.</p>
                     </div>
                     <div class="info-box">
                         <h3>Open Food Facts</h3>
-                        <p>Asociación sin ánimo de lucro fundada en Francia en 2012. Funciona como una Wikipedia del etiquetado con más de 4M de productos, 25K+ colaboradores y 150+ países.</p>
+                        <p>Asociación sin ánimo de lucro fundada en Francia en 2012. Funciona como una Wikipedia del etiquetado con más de 4M de productos, 25K+ colaboradores y 150+ países (licencia abierta ODbL).</p>
                     </div>
                 </div>
             </section>
@@ -226,7 +237,7 @@
                 <ul>
                     <li><strong>Mi cuenta:</strong> Gestión de datos de usuario.</li>
                     <li><strong>Quiénes somos:</strong> Información del proyecto y Open Food Facts.</li>
-                    <li><strong>Jardín Zen:</strong> Acceso al jardín personal interactivo.</li>
+                    <li><strong>Jardín Zen:</strong> Acceso exclusivo al jardín personal interactivo.</li>
                     <li><strong>Recompensas niveles:</strong> Tabla completa de insignias y puntos.</li>
                     <li><strong>Info Logros:</strong> Detalles sobre los logros de la aplicación.</li>
                 </ul>
@@ -234,7 +245,7 @@
 
             <section id="mi-cuenta" class="card">
                 <h2>14. Mi cuenta</h2>
-                <p>Pantalla de gestión que muestra el correo electrónico asociado a la sesión activa y permite pulsar el botón <strong>"Cerrar sesión"</strong> para salir de la aplicación de forma segura.</p>
+                <p>Pantalla de gestión que muestra el icono de perfil, el correo electrónico asociado a la sesión activa (ej. <code>sanchezeliana395@gmail.com</code>) y permite pulsar el botón <strong>"Cerrar sesión"</strong> para regresar al login.</p>
             </section>
         </div>
     </main>
