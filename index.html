@@ -6,6 +6,12 @@
     <title>Q-Como - Manual de Usuario (TFG DAM 2026)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Pequeñas ayudas que no forman parte del sistema de diseño de style.css */
+        .img-missing { border: 1px dashed #c0392b; color: #c0392b; padding: 0.6rem 0.9rem; border-radius: 10px; font-size: 0.9rem; margin-top: 12px; background: #fdf2f2; }
+        .off-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; color: #2e7d32; font-weight: 700; text-decoration: none; }
+        .off-link:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
     <header class="hero">
@@ -13,7 +19,7 @@
             <div class="logo-badge">TFG · DAM 2026</div>
             <h1>Q-Como</h1>
             <p class="tagline">Escanea · Descubre · Elige mejor</p>
-            <p class="hero-desc">Aplicación móvil para Android orientada al consumo consciente y sostenible. Traduce el etiquetado de los alimentos en información clara de salud y medio ambiente.</p>
+            <p class="hero-desc">Aplicación móvil para Android orientada al consumo consciente y sostenible. Q-Como traduce el etiquetado, a menudo denso y poco accesible, de los productos alimenticios en información clara sobre su calidad nutricional y su impacto ambiental, ayudando a decidir en segundos frente al lineal del supermercado.</p>
             <div class="hero-buttons">
                 <a href="#introduccion" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Ver Manual</a>
                 <a href="#quienes-somos" class="btn btn-outline"><i class="fa-solid fa-users"></i> Quiénes Somos</a>
@@ -30,16 +36,17 @@
                     <li><a href="#requisitos">2. Requisitos</a></li>
                     <li><a href="#registro">3. Registro e inicio de sesión</a></li>
                     <li><a href="#onboarding">4. Pantalla de onboarding</a></li>
-                    <li><a href="#escaneo">5. Escaneo de un producto</a></li>
-                    <li><a href="#detalle">6. Detalle del producto</a></li>
-                    <li><a href="#favoritos">7. Añadir a favoritos</a></li>
-                    <li><a href="#puntos">8. Sistema de puntos y gamificación</a></li>
-                    <li><a href="#jardin-zen">9. El Jardín Zen</a></li>
-                    <li><a href="#ranking">10. Ranking y comunidad</a></li>
-                    <li><a href="#contribucion">11. Contribución a Open Food Facts</a></li>
-                    <li><a href="#quienes-somos">12. Quiénes somos</a></li>
-                    <li><a href="#menu-opciones">13. Menú de opciones (Home)</a></li>
-                    <li><a href="#mi-cuenta">14. Mi cuenta</a></li>
+                    <li><a href="#home">5. Pantalla principal (Home)</a></li>
+                    <li><a href="#escaneo">6. Escaneo de un producto</a></li>
+                    <li><a href="#detalle">7. Detalle del producto</a></li>
+                    <li><a href="#favoritos">8. Añadir a favoritos</a></li>
+                    <li><a href="#puntos">9. Sistema de puntos y gamificación</a></li>
+                    <li><a href="#jardin-zen">10. El Jardín Zen</a></li>
+                    <li><a href="#ranking">11. Ranking y comunidad</a></li>
+                    <li><a href="#contribucion">12. Contribución a Open Food Facts</a></li>
+                    <li><a href="#quienes-somos">13. Quiénes somos</a></li>
+                    <li><a href="#menu-opciones">14. Menú de opciones</a></li>
+                    <li><a href="#mi-cuenta">15. Mi cuenta</a></li>
                 </ul>
             </nav>
         </aside>
@@ -47,125 +54,151 @@
         <div class="content">
             <section id="introduccion" class="card">
                 <h2>1. Introducción</h2>
-                <p><strong>Q-Como</strong> es una aplicación móvil para Android que permite a los usuarios escanear el código de barras de productos alimenticios y consultar al instante información nutricional y medioambiental relevante: el <strong>Nutri-Score</strong> (calidad nutricional) y el <strong>Green-Score</strong> (impacto ambiental). Además de esta función principal, la app incorpora un sistema de favoritos, gamificación mediante puntos y recompensas visuales, y la posibilidad de contribuir con nuevos datos a la comunidad de Open Food Facts, fomentando el consumo informado y sostenible[cite: 1].</p>
+                <p><strong>Q-Como</strong> es una aplicación móvil para Android que permite a los usuarios escanear el código de barras de productos alimenticios y consultar al instante información nutricional y medioambiental relevante: el <strong>Nutri-Score</strong> (calidad nutricional) y el <strong>Green-Score</strong> (impacto ambiental), además de datos complementarios como el grupo <strong>NOVA</strong> de procesamiento, los alérgenos, los azúcares y las grasas saturadas del producto.</p>
+                <p>Más allá de la consulta puntual de un producto, la app incorpora un sistema de favoritos para guardar los alimentos de interés, un mecanismo de gamificación mediante puntos, niveles e insignias que recompensan el uso continuado de la aplicación, y una recompensa visual —el Jardín Zen— que evoluciona a medida que el usuario progresa. Por último, Q-Como permite contribuir con nuevos datos a la comunidad de <strong>Open Food Facts</strong>, la base de datos abierta que nutre la aplicación, cerrando así el círculo entre consumir información y devolverla a la comunidad. Todo ello persigue un mismo objetivo: fomentar el consumo informado y sostenible, haciendo visible en segundos lo que hasta ahora exigía leer con lupa una etiqueta.</p>
             </section>
 
             <section id="requisitos" class="card">
                 <h2>2. Requisitos</h2>
                 <ul class="feature-list">
-                    <li><i class="fa-solid fa-mobile-screen"></i> <strong>Dispositivo:</strong> Android 8.0 (Oreo) o superior[cite: 1].</li>
-                    <li><i class="fa-solid fa-wifi"></i> <strong>Conexión a internet:</strong> Necesaria para consultar productos y sincronizar datos[cite: 1].</li>
-                    <li><i class="fa-solid fa-user-check"></i> <strong>Cuenta de usuario:</strong> Registro dentro de la propia app[cite: 1].</li>
-                    <li><i class="fa-solid fa-camera"></i> <strong>Cámara del dispositivo:</strong> Para el escaneo de códigos de barras[cite: 1].</li>
+                    <li><i class="fa-solid fa-mobile-screen"></i> <strong>Dispositivo:</strong> Android 8.0 (Oreo) o superior.</li>
+                    <li><i class="fa-solid fa-wifi"></i> <strong>Conexión a internet:</strong> necesaria para consultar productos y sincronizar datos con el backend.</li>
+                    <li><i class="fa-solid fa-user-check"></i> <strong>Cuenta de usuario:</strong> registro dentro de la propia app.</li>
+                    <li><i class="fa-solid fa-camera"></i> <strong>Cámara del dispositivo:</strong> para el escaneo de códigos de barras.</li>
                 </ul>
             </section>
 
             <section id="registro" class="card">
                 <h2>3. Registro e inicio de sesión</h2>
-                <p>Al abrir la aplicación sin una sesión activa, se muestra la pantalla de inicio de sesión[cite: 1]:</p>
+                <p>Al abrir la aplicación sin una sesión activa, se muestra la pantalla de inicio de sesión, donde el usuario introduce su correo electrónico y contraseña para acceder a su cuenta:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/login.png" alt="Pantalla de inicio de sesión" class="app-screenshot">
-                    <p class="caption">Pantalla de login — logo Q-Como, campos de correo y contraseña[cite: 1].</p>
+                    <img src="images/login.png" alt="Pantalla de inicio de sesión" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/login.png. Comprueba que el archivo existe y que el nombre coincide exactamente (mayúsculas/minúsculas incluidas).&lt;/p&gt;');">
+                    <p class="caption">Pantalla de login — logo Q-Como, campos de correo y contraseña.</p>
                 </div>
-                <p>Desde el botón "Crear una cuenta" se accede al formulario de registro[cite: 1]:</p>
+                <p>Desde el botón "Crear una cuenta" se accede al formulario de registro, donde se solicitan los datos mínimos necesarios para dar de alta al usuario en el sistema:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/registro.png" alt="Pantalla de registro" class="app-screenshot">
-                    <p class="caption">Pantalla "Crea tu cuenta" — formulario de registro[cite: 1].</p>
+                    <img src="images/registro.png" alt="Pantalla de registro" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/registro.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Crea tu cuenta" — formulario de registro.</p>
                 </div>
             </section>
 
             <section id="onboarding" class="card">
                 <h2>4. Pantalla de onboarding</h2>
-                <p>Tras el primer registro (o al iniciar sesión por primera vez), la aplicación muestra una breve introducción de tres pantallas deslizables[cite: 1]:</p>
+                <p>Tras el primer registro (o al iniciar sesión por primera vez), la aplicación muestra una breve introducción de tres pantallas deslizables que explican, de forma visual y resumida, en qué consiste el eco-score, qué es la comunidad de Open Food Facts y por qué Q-Como apuesta por el consumo consciente. Su objetivo es familiarizar al usuario con la filosofía de la app antes de empezar a escanear productos:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/onboarding.png" alt="Pantallas de onboarding" class="app-screenshot">
-                    <p class="caption">Onboarding — 3 pantallas: eco-score / comunidad Open Food Facts / consumo consciente[cite: 1].</p>
+                    <img src="images/onboarding.png" alt="Pantallas de onboarding" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/onboarding.png.&lt;/p&gt;');">
+                    <p class="caption">Onboarding — 3 pantallas: eco-score / comunidad Open Food Facts / consumo consciente.</p>
+                </div>
+            </section>
+
+            <section id="home" class="card">
+                <h2>5. Pantalla principal (Home)</h2>
+                <p>Es la pantalla a la que llega el usuario tras iniciar sesión y el punto de partida de toda la navegación de la app. Desde aquí se accede directamente a la función de escaneo, y a través del icono de tres puntos (⋮) se despliega el menú de opciones con el resto de secciones: Mi cuenta, Quiénes somos, Jardín Zen, Recompensas por niveles e Info de logros.</p>
+                <div class="app-screenshot-container">
+                    <img src="images/Home.png" alt="Pantalla principal (Home)" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/Home.png. Sube la imagen a la carpeta images/ con ese nombre exacto.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Home" — acceso al escaneo y al menú de opciones.</p>
                 </div>
             </section>
 
             <section id="escaneo" class="card">
-                <h2>5. Escaneo de un producto</h2>
-                <p>Desde la pantalla principal, el usuario accede a la función de escaneo de código de barras[cite: 1]:</p>
+                <h2>6. Escaneo de un producto</h2>
+                <p>Desde la pantalla principal, el usuario accede a la función de escaneo de código de barras. La cámara se activa con una guía visual que facilita el encuadre; en cuanto el código es reconocido, la app consulta automáticamente la información del producto en Open Food Facts:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/escaneo.png" alt="Pantalla escanea tu alimento" class="app-screenshot">
-                    <p class="caption">Pantalla "Escanea tu alimento" — visor de cámara con guía de escaneo[cite: 1].</p>
+                    <img src="images/escaneo.png" alt="Pantalla escanea tu alimento" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/escaneo.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Escanea tu alimento" — visor de cámara con guía de escaneo.</p>
                 </div>
             </section>
 
             <section id="detalle" class="card">
-                <h2>6. Pantalla de detalle del producto</h2>
-                <p>Tras escanear (o seleccionar) un producto, se muestra su ficha detallada[cite: 1]:</p>
+                <h2>7. Pantalla de detalle del producto</h2>
+                <p>Tras escanear (o seleccionar) un producto, se muestra su ficha detallada: nombre y foto del producto, Nutri-Score, Green-Score, grupo NOVA de procesamiento, ingredientes, alérgenos, azúcares y grasas saturadas. Es la pantalla central de la app, donde toda la información recogida de Open Food Facts se presenta de forma clara y jerarquizada:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/detalle.png" alt="Pantalla detalle del producto" class="app-screenshot">
-                    <p class="caption">Pantalla "Detalle del producto" — puntuaciones, nutrientes, ingredientes y alérgenos[cite: 1].</p>
+                    <img src="images/detalle.png" alt="Pantalla detalle del producto" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/detalle.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Detalle del producto" — puntuaciones, nutrientes, ingredientes y alérgenos.</p>
                 </div>
             </section>
 
             <section id="favoritos" class="card">
-                <h2>7. Añadir a favoritos</h2>
-                <p>Pulsando el icono de tres puntos (⋮) en la ficha de detalle, se despliega un menú con dos opciones[cite: 1]:</p>
+                <h2>8. Añadir a favoritos</h2>
+                <p>Pulsando el icono de tres puntos (⋮) en la ficha de detalle, se despliega un menú con dos opciones: aportar información sobre el producto o incluirlo en la lista de favoritos, para poder consultarlo rápidamente más adelante sin necesidad de volver a escanearlo:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/menu-opciones.png" alt="Menú desplegable" class="app-screenshot">
-                    <p class="caption">Menú desplegable sobre "Detalle del producto" — Aportar información / Incluir en favoritos[cite: 1].</p>
+                    <img src="images/menu-opciones.png" alt="Menú desplegable" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/menu-opciones.png.&lt;/p&gt;');">
+                    <p class="caption">Menú desplegable sobre "Detalle del producto" — Aportar información / Incluir en favoritos.</p>
                 </div>
             </section>
 
             <section id="puntos" class="card">
-                <h2>8. Sistema de puntos y gamificación</h2>
-                <p>Los usuarios acumulan puntos mediante el uso de la aplicación que determinan su nivel, asociado a una insignia visual[cite: 1]:</p>
+                <h2>9. Sistema de puntos y gamificación</h2>
+                <p>Los usuarios acumulan puntos mediante el uso de la aplicación —escanear productos, añadir favoritos o contribuir con nuevos datos a Open Food Facts—. Esos puntos determinan el nivel del usuario, asociado a una insignia visual que se muestra en su perfil y en el ranking de la comunidad:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/insignias.png" alt="Insignias y Puntos" class="app-screenshot">
-                    <p class="caption">Tabla "Insignias y Puntos"[cite: 1].</p>
+                    <img src="images/insignias.png" alt="Insignias y Puntos" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/insignias.png.&lt;/p&gt;');">
+                    <p class="caption">Tabla "Insignias y Puntos".</p>
                 </div>
             </section>
 
             <section id="jardin-zen" class="card">
-                <h2>9. El Jardín Zen</h2>
-                <p>Es la recompensa visual del progreso del usuario: un jardín personal que se va enriqueciendo con nuevos elementos a medida que se sube de nivel[cite: 1].</p>
+                <h2>10. El Jardín Zen</h2>
+                <p>Es la recompensa visual del progreso del usuario: un jardín personal que se va enriqueciendo con nuevos elementos —árboles, piedras zen, incienso, fuente— a medida que se sube de nivel. Cada elemento se anima mediante una animación Lottie que se despliega progresivamente conforme se desbloquean nuevos logros, convirtiendo el avance dentro de la app en algo tangible y agradable de visitar:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/jardin-zen.png" alt="Jardín Zen" class="app-screenshot">
-                    <p class="caption">Jardín Zen — escena con árboles, piedras y farolillo[cite: 1].</p>
+                    <img src="images/jardin-zen.png" alt="Jardín Zen" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/jardin-zen.png. Revisa que el archivo esté en la carpeta images/ y que el nombre coincida exactamente (sin mayúsculas ni espacios distintos).&lt;/p&gt;');">
+                    <p class="caption">Jardín Zen — escena con árboles, piedras y farolillo.</p>
                 </div>
             </section>
 
             <section id="ranking" class="card">
-                <h2>10. Ranking / colaboración con la comunidad</h2>
-                <p>Muestra una clasificación de usuarios según los puntos acumulados, fomentando la participación y la comparación[cite: 1]:</p>
+                <h2>11. Ranking / colaboración con la comunidad</h2>
+                <p>Muestra una clasificación de usuarios según los puntos acumulados, fomentando la participación y la comparación entre la comunidad de Q-Como:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/ranking.png" alt="Ranking" class="app-screenshot">
-                    <p class="caption">Pantalla "Ranking" — listado de usuarios con puntos y nivel[cite: 1].</p>
+                    <img src="images/ranking.png" alt="Ranking" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/ranking.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Ranking" — listado de usuarios con puntos y nivel.</p>
                 </div>
             </section>
 
             <section id="contribucion" class="card">
-                <h2>11. Contribución a Open Food Facts</h2>
-                <p>Desde la pantalla de detalle, mediante la opción "Aportar información", se accede al formulario de contribución de datos[cite: 1]:</p>
+                <h2>12. Contribución a Open Food Facts</h2>
+                <p>Desde la pantalla de detalle, mediante la opción "Aportar información", se accede al formulario de contribución de datos. Los datos introducidos por el usuario se envían directamente a Open Food Facts, ampliando y mejorando la base de datos abierta de la que se nutre la propia app:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/anadir-producto.png" alt="Añadir Producto" class="app-screenshot">
-                    <p class="caption">Pantalla "Añadir Producto"[cite: 1].</p>
+                    <img src="images/anadir-producto.png" alt="Añadir Producto" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/anadir-producto.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Añadir Producto".</p>
                 </div>
             </section>
 
             <section id="quienes-somos" class="card">
-                <h2>12. Quiénes somos</h2>
-                <p>Sección informativa sobre el propósito de la aplicación (TFG de DAM) y Open Food Facts[cite: 1].</p>
+                <h2>13. Quiénes somos</h2>
+                <p>Sección informativa sobre el propósito de la aplicación (Trabajo de Fin de Grado de DAM) y sobre Open Food Facts, la base de datos colaborativa en la que se apoya Q-Como para obtener y ampliar la información de los productos.</p>
                 <div class="app-screenshot-container">
-                    <img src="images/quienes-somos.png" alt="Quiénes somos" class="app-screenshot">
-                    <p class="caption">Pantalla "¿Quiénes somos?" — el equipo detrás de cada escaneo[cite: 1].</p>
+                    <img src="images/quienes-somos.png" alt="Quiénes somos" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/quienes-somos.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "¿Quiénes somos?" — el equipo detrás de cada escaneo.</p>
                 </div>
+                <p>Desde esta pantalla, la app redirige a la página oficial de Open Food Facts. Este enlace no es solo informativo: es un requisito derivado de la licencia bajo la que se distribuyen los datos, la <strong>Open Database License (ODBL)</strong>, que exige reconocer y enlazar a la fuente original cada vez que se reutilizan sus datos.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Aspecto</th><th>Descripción</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Fuente de datos</td><td>Open Food Facts, base de datos colaborativa y abierta de productos alimenticios de todo el mundo.</td></tr>
+                            <tr><td>Licencia</td><td>Open Database License (ODBL).</td></tr>
+                            <tr><td>Condición principal</td><td>Atribución obligatoria: citar a Open Food Facts como fuente y enlazar a su web y a la licencia.</td></tr>
+                            <tr><td>Enlace desde Q-Como</td><td>La sección "Quiénes somos" incluye un enlace directo a openfoodfacts.org.</td></tr>
+                            <tr><td>Contrapartida</td><td>Los datos que el usuario aporta desde Q-Como (sección 12) se reintegran en Open Food Facts, devolviendo valor a la comunidad de la que procede la información.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="off-link" href="https://world.openfoodfacts.org" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Open Food Facts</a>
             </section>
 
             <section id="menu-opciones" class="card">
-                <h2>13. Menú de opciones (Home)</h2>
-                <p>Desplegable de acceso rápido a Mi cuenta, Quiénes somos, Jardín Zen, Recompensas niveles e Info Logros pulsando el icono de tres puntos (⋮)[cite: 1].</p>
+                <h2>14. Menú de opciones</h2>
+                <p>Desplegable de acceso rápido a Mi cuenta, Quiénes somos, Jardín Zen, Recompensas por niveles e Info de logros, disponible desde la pantalla Home pulsando el icono de tres puntos (⋮).</p>
             </section>
 
             <section id="mi-cuenta" class="card">
-                <h2>14. Mi cuenta</h2>
-                <p>Pantalla de gestión de los datos de la cuenta del usuario[cite: 1]:</p>
+                <h2>15. Mi cuenta</h2>
+                <p>Pantalla de gestión de los datos de la cuenta del usuario, donde se muestra el correo electrónico asociado y se ofrece la opción de cerrar sesión:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/mi-cuenta.png" alt="Mi cuenta" class="app-screenshot">
-                    <p class="caption">Pantalla "Mi cuenta" — correo electrónico y botón de cerrar sesión[cite: 1].</p>
+                    <img src="images/mi-cuenta.png" alt="Mi cuenta" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/mi-cuenta.png.&lt;/p&gt;');">
+                    <p class="caption">Pantalla "Mi cuenta" — correo electrónico y botón de cerrar sesión.</p>
                 </div>
             </section>
         </div>
