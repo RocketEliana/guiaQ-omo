@@ -125,11 +125,34 @@
                     <img src="images/menu-opciones.png" alt="Menú desplegable" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/menu-opciones.png.&lt;/p&gt;');">
                     <p class="caption">Menú desplegable sobre "Detalle del producto" — Aportar información / Incluir en favoritos.</p>
                 </div>
+                <p>Un favorito no solo se añade desde la ficha de detalle: también puede eliminarse directamente desde la propia lista de favoritos, pulsando el icono de papelera de cada ítem, sin necesidad de abrir el producto:</p>
+                <div class="app-screenshot-container">
+                    <img src="images/Borra.png" alt="Eliminar favorito desde la lista" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/Borr.png.&lt;/p&gt;');">
+                    <p class="caption">Lista de favoritos — el icono de papelera de cada ítem permite borrarlo al instante.</p>
+                </div>
             </section>
 
             <section id="puntos" class="card">
                 <h2>9. Sistema de puntos y gamificación</h2>
-                <p>Los usuarios acumulan puntos mediante el uso de la aplicación —escanear productos, añadir favoritos o contribuir con nuevos datos a Open Food Facts—. Esos puntos determinan el nivel del usuario, asociado a una insignia visual que se muestra en su perfil y en el ranking de la comunidad:</p>
+                <p>Los usuarios acumulan puntos mediante el uso de la aplicación —escanear productos o contribuir con nuevos datos a Open Food Facts—. Esos puntos determinan el nivel del usuario, asociado a una insignia visual que se muestra en su perfil y en el ranking de la comunidad.</p>
+                <p>La forma de otorgar puntos no es arbitraria: está pensada para premiar directamente el consumo saludable y sostenible. Al contribuir un producto a Open Food Facts se obtiene siempre una cantidad fija de puntos; al escanear un producto, en cambio, los puntos dependen de su Nutri-Score y de su Green-Score, de modo que cuanto mejor sea la calidad nutricional y el impacto ambiental de lo que se escanea, más puntos se ganan:</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Acción</th><th>Puntos</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Contribuir un producto a Open Food Facts</td><td>120 puntos</td></tr>
+                            <tr><td>Escanear un producto — grado A (Nutri-Score / Green-Score)</td><td>50 puntos por grado</td></tr>
+                            <tr><td>Escanear un producto — grado B</td><td>40 puntos por grado</td></tr>
+                            <tr><td>Escanear un producto — grado C</td><td>30 puntos por grado</td></tr>
+                            <tr><td>Escanear un producto — grado D</td><td>20 puntos por grado</td></tr>
+                            <tr><td>Escanear un producto — grado E</td><td>10 puntos por grado</td></tr>
+                            <tr><td>Escanear un producto sin grado disponible</td><td>0 puntos</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>En cada escaneo se suman los puntos correspondientes al Nutri-Score y al Green-Score del producto, hasta un máximo de 100 puntos cuando ambos son de grado A. Así, un producto sano y de bajo impacto ambiental reporta muchos más puntos que uno mal calificado en ambas escalas, favoreciendo de forma directa el consumo consciente y sostenible:</p>
                 <div class="app-screenshot-container">
                     <img src="images/insignias.png" alt="Insignias y Puntos" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/insignias.png.&lt;/p&gt;');">
                     <p class="caption">Tabla "Insignias y Puntos".</p>
@@ -140,7 +163,7 @@
                 <h2>10. El Jardín Zen</h2>
                 <p>Es la recompensa visual del progreso del usuario: un jardín personal que se va enriqueciendo con nuevos elementos —árboles, piedras zen, incienso, fuente— a medida que se sube de nivel. Cada elemento se anima mediante una animación Lottie que se despliega progresivamente conforme se desbloquean nuevos logros, convirtiendo el avance dentro de la app en algo tangible y agradable de visitar:</p>
                 <div class="app-screenshot-container">
-                    <img src="images/jardin-zen.png" alt="Jardín Zen" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/jardin-zen.png. Revisa que el archivo esté en la carpeta images/ y que el nombre coincida exactamente (sin mayúsculas ni espacios distintos).&lt;/p&gt;');">
+                    <img src="images/JardinZen.png" alt="Jardín Zen" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/jardin-zen.png. Revisa que el archivo esté en la carpeta images/ y que el nombre coincida exactamente (sin mayúsculas ni espacios distintos).&lt;/p&gt;');">
                     <p class="caption">Jardín Zen — escena con árboles, piedras y farolillo.</p>
                 </div>
             </section>
@@ -151,6 +174,11 @@
                 <div class="app-screenshot-container">
                     <img src="images/ranking.png" alt="Ranking" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/ranking.png.&lt;/p&gt;');">
                     <p class="caption">Pantalla "Ranking" — listado de usuarios con puntos y nivel.</p>
+                </div>
+                <p>Desde el propio ranking, la opción "Ver huella" permite consultar el punto de crecimiento del arbolito de recompensa: una representación visual de en qué momento del nivel actual se encuentra el usuario, a modo de avance hacia la siguiente insignia:</p>
+                <div class="app-screenshot-container">
+                    <img src="images/Recompensa.png" alt="Ver huella - crecimiento del árbol de recompensa" class="app-screenshot" onerror="this.onerror=null;this.style.display='none';this.insertAdjacentHTML('afterend','&lt;p class=\'img-missing\'&gt;⚠ No se encuentra images/Recompensa.png.&lt;/p&gt;');">
+                    <p class="caption">"Ver huella" — evolución del árbol según el nivel y los puntos de recompensa acumulados.</p>
                 </div>
             </section>
 
